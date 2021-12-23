@@ -1,3 +1,8 @@
+For 24th Dec
+Q2). Write a program in Python for, In a array 1-100 multiple numbers are duplicates, how do you find it.
+Q8). Write a program in Python to remove duplicate elements form array.
+Write a simple program using NumPy
+
 From https://codingcompiler.com/python-coding-interview-questions-answers/
 How do you debug a Python program?
 What is <Yield> Keyword in Python?
