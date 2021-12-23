@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import random
+import math
 
 def CreateTestSeq(listSize):
     testSeq=[i for i in range(listSize)]
@@ -14,9 +15,9 @@ found=False
 i=seqLength-1
 offset=0
 while not found:
-    if i==int(i/2):
+    if a[offset]==offset and a[offset+1]!=offset+1:
         found=True
-    i=int(i/2)
+    i=math.ceil(i/2)
     if a[offset+i]>offset+i:  # if True, gap must be in first half
         print("Missing number in first half ",i,offset)
     else:
