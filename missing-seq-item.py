@@ -14,15 +14,17 @@ print(a)
 found=False
 i=seqLength-1
 offset=0
+iteration=0
 while not found:
+    iteration+=1
     if a[offset]==offset and a[offset+1]!=offset+1:
         found=True
     i=math.ceil(i/2)
     if a[offset+i]>offset+i:  # if True, gap must be in first half
-        print("Missing number in first half ",i,offset)
+        print("Iteration #",iteration," Missing number in first half ",i,offset)
     else:
         offset+=i
-        print("Missing number in second half ",i,offset)
+        print("Iteration #", iteration," Missing number in second half ",i,offset)
 
 print("Missing number is ",offset+1)
 
