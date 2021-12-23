@@ -1,3 +1,4 @@
+From https://codingcompiler.com/python-coding-interview-questions-answers/
 How do you debug a Python program?
 What is <Yield> Keyword in Python?
 How to convert a list into a string?
@@ -9,4 +10,19 @@ How can you create Empty NumPy Array In Python?
 What is a negative index in Python?
 How do you Concatenate Strings in Python?
 
+From https://quescol.com/interview-preparation/python-coding-question
+Python Programming Coding Questions on String
+Q1). Write a method in Python which will remove any given character from a String.
+Q2). Write a program in Python to count occurrence of a given character in a String?
+Q3). Write a program in Python to check if two String are Anagram.
+Q4). Write a program in Python to check a String is palindrome or not.
 
+Python Programming Coding Questions on Array
+Q1). Write a program in Python for, In array 1-100 numbers are stored, one number is missing how do you find it.
+Q2). Write a program in Python for, In a array 1-100 multiple numbers are duplicates, how do you find it.
+Q3). Write a program in Python for, How to find all pairs in array of integers whose sum is equal to given number.
+Q4). Write a program in Python for, How to compare two array is equal in size or not.
+Q5). Write a program in Python to find largest and smallest number in array.
+Q6). Write a program in Python to find second highest number in an integer array.
+Q7). Write a program in Python to find top two maximum number in array?
+Q8). Write a program in Python to remove duplicate elements form array.
