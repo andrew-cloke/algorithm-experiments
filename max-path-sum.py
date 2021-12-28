@@ -30,6 +30,7 @@ def findMaxUtil(root):
     # consideration is the root of the maxSum path and
     # no ancestor of root are there in max sum path
     max_top = max(max_single, l+r+ root.data)
+    print("Root ",root.data,"Left ",l,"Right ",r,"max_single",max_single,"max_top",max_top)
  
     # Static variable to store the changes
     # Store the maximum result
