@@ -56,6 +56,6 @@ root.left.right = Node(1);
 root.right.right = Node(-25);
 root.right.right.left   = Node(3);
 root.right.right.right  = Node(4);
-print "Max path sum is " ,findMaxSum(root);
+print("Max path sum is " ,findMaxSum(root));
  
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007)
