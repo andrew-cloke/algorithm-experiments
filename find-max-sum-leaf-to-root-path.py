@@ -29,24 +29,47 @@ def findLeafToRootMaxSum(root):
 
 def findLeafToRootMaxSumTopDown(node,sumSoFar):
     global maxSoFar
+    global targetLeafNode
 
     if node == None:
         return
 
     sumSoFar+=node.data
+    if sumSoFar > maxSoFar:
+        maxSoFar=sumSoFar
+        targetLeafNode=node
+
+    print("Sum so far",sumSoFar,"Max so far",maxSoFar,"Node",node.data)
     maxSoFar=max(maxSoFar,sumSoFar)
     findLeafToRootMaxSumTopDown(node.left,sumSoFar)
     findLeafToRootMaxSumTopDown(node.right,sumSoFar)
-    
+
+def printPathToTarget(node):
+    global targetLeafNode
+
+    if node==None:
+        return False
+
+    if (printPathToTarget(node.left) or printPathToTarget(node.right) or node==targetLeafNode):
+        print(node.data,end=" ")
+        return True
+    return False
+
 
 # Driver program
 root = Node(10)
-root.left = Node(-2)
-root.right   = Node(7)
-root.left.left  = Node(8)
-root.left.right = Node(-4)
-maxSoFar=0
+root.left = Node(2)
+root.right   = Node(10);
+root.left.left  = Node(20);
+root.left.right = Node(1);
+root.right.right = Node(-25);
+root.right.right.left   = Node(3);
+root.right.right.right  = Node(4);
+maxSoFar=-99999
 findLeafToRootMaxSumTopDown(root,0)
 print("Max sum from leaf to root is " ,maxSoFar)
+print("Root from leaf to root is ", end="")
+printPathToTarget(root)
+print("")
 
 # print("Max sum from leaf to root is " ,findLeafToRootMaxSum(root))
