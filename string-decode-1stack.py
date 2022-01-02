@@ -25,12 +25,10 @@ def decode(s):
                         break
                 else:
                     break
-            repeatedStr=repeatStr*count
-            for d in repeatedStr:
-                charStack.append(d)
+            charStack.append(repeatStr*count)
         else:
             charStack.append(c)
     return str.join('',charStack)
 
-print(decode("2[a3[bc]]2[d]"))
+print(decode("2[a3[bc]]21[d]"))
         
