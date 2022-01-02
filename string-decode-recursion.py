@@ -26,5 +26,6 @@ def decode(s):
     print("giving",s)
     return s
 
-print(decode("a2[b2[c]]d"))
+print(decode("a2[b2[c]]d")) # works
+print(decode("a2[b2[c]]2[d]")) # fails
 
