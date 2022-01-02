@@ -1,4 +1,4 @@
-# Decode string with nested repeats
+# Decode string with nested repeats - recursive approach
 # E.g. "1[b]" -> "b"; "2[a3[b]]" -> "abbbabbb"
 
 import re
