@@ -33,4 +33,4 @@ def print_first_n_ugly_nums(n):
             cnt+=1
     print("\n")
 
-print_first_n_ugly_nums(20)
+print_first_n_ugly_nums(100)
