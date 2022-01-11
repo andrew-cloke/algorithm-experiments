@@ -6,11 +6,9 @@ def find_ugly_nums(n):
     i3=0
     i5=0
     l.append(1)
-    print(l[-1]," ",end="")
     while len(l)<n:
         next=min(l[i2]*2, l[i3]*3, l[i5]*5)
         l.append(next)
-        print(l[-1]," ",end="")
 
         if next==l[i2]*2:
             i2+=1
