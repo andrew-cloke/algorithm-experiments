@@ -13,10 +13,12 @@ def hamlton_check(graph,curr_pos,visited):
     global found
 
     if allVisited(visited):
-        print("Path",path)
         if graph[curr_pos][0]==1:
+            path.append((curr_pos,0))
+            print("Path",path)
+            path.pop()
             found=True
-    
+   
     for i in range(nodes):
         if not visited[i] and graph[curr_pos][i]==1:
             path.append((curr_pos,i))
