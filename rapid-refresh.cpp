@@ -4,6 +4,7 @@
 #include <list>
 #include <map>
 #include <string>
+#include <stack>
 
 using namespace std;
 
@@ -58,6 +59,19 @@ int main()
     for(j=a.begin();j!=a.end();j++)
     {
         cout << j->second << " ";
+    }
+    cout << endl;
+
+    stack<string> b;
+    b.push("Hello");
+    b.push("World");
+    b.push("Goodbye");
+    b.push("Evil");
+
+    while(!b.empty())
+    {
+        cout << b.top() << " ";
+        b.pop();
     }
     cout << endl;
 
