@@ -32,6 +32,37 @@ public:
     };
 };
 
+class Node
+{
+public:
+    Node(int a)
+    {
+        data=a;
+        iLeft=NULL;
+        iRight=NULL;
+    }
+
+    int data;
+    Node* iLeft;
+    Node* iRight;
+};
+
+void printNode(Node* a) {
+    cout << " " << a->data << " ";
+    if(a->iLeft) {
+        cout << "Left";
+        printNode(a->iLeft);
+    } else {
+        cout << endl;
+    }
+    if(a->iRight) {
+        cout << "Right";
+        printNode(a->iRight);
+    } else {
+        cout << endl;
+    }
+}
+
 int main()
 {
     cout << "Hello World\n";
@@ -73,6 +104,15 @@ int main()
         cout << b.top() << " ";
         b.pop();
     }
+    cout << endl;
+
+    Node* root=new Node(2);
+    root->iLeft=new Node(4);
+    root->iRight=new Node(7);
+    root->iRight->iLeft=new Node(9);
+    root->iRight->iRight=new Node(10);
+
+    printNode(root);
     cout << endl;
 
     return 0;
