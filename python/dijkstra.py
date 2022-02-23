@@ -12,19 +12,24 @@ graph = [[0, 4, 0, 0, 0, 0, 0, 8, 0],
         [8, 11, 0, 0, 0, 0, 1, 0, 7],
         [0, 0, 2, 0, 0, 0, 6, 7, 0]
         ]
-visited=[-1]*V
 distance=[1000]*V
+q=[i for i in range(0,9)]
 u=0
 distance[u]=0
-visited[u]=0
-q=[i for i in range(0,9)]
 while len(q)>0:
-        u=q.pop(0)
-        print(q,visited,distance)
+        print(u,q,distance)
+# Find the distance from u to each connected node and update if minimum
         for v in q:
                 a=distance[u]+graph[u][v]
                 if graph[u][v]>0 and a<distance[v]:
                         distance[v]=a
-                        visited[v]=0
+# Remove the visited node from the list
+        q.remove(u)
+# Process the unvisited node with the minimum distance next 
+        min=1000
+        for v in q:
+                if distance[v]<min:
+                        min=distance[v]
+                        u=v
 
-print(q,visited,distance)
+print(distance)
