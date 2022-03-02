@@ -13,20 +13,6 @@ def findNum(s,i,j,num):
                 return True
     return False
 
-def createPossibilityMatrix(s):
-    matrix=[]
-    for i in range(0,9):
-        a=[]
-        for j in range(0,9):
-            b=[]
-            if s[i][j]==0:
-                for k in range(1,10):
-                    if not findNum(s,i,j,k):
-                        b.append(k)
-            a.append(b)
-        matrix.append(a)
-    return matrix
-
 def createPossibilityCell(s,i,j):
     p=[]
     for k in range(1,10):
@@ -45,15 +31,12 @@ def findNextEmptyCell(s,i,j):
     return (i,j)
 
 def findCell(s,i,j):
-    global rollback
     (i,j)=findNextEmptyCell(s,i,j)
     if j==9:
-        print(s)
         return True
     p=createPossibilityCell(s,i,j)
     if len(p)==0:
         return False
-    print(i,j)
     for v in p:
         s[i][j]=v
         finish=findCell(s,i,j)
@@ -70,5 +53,8 @@ s=[[5,9,0,0,8,4,0,0,0],
    [0,2,0,3,0,7,9,0,4],
    [0,3,0,0,1,0,0,0,0],
    [6,0,0,5,4,0,0,3,0]]
-rollback=[]
 findCell(s,0,0)
+for row in s:
+    for i in row:
+        print(i," ", end="")
+    print()
