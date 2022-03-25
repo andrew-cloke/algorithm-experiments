@@ -1,5 +1,7 @@
 # sudoku solver
 
+import copy
+
 def findNum(s,i,j,num):
     for a in range(0,9):
         if s[i][a]==num:
@@ -63,8 +65,16 @@ s2=[[4,0,0,0,0,0,0,5,8],
     [0,2,3,6,0,0,0,1,7],
     [0,0,7,0,2,0,0,0,0],
     [1,9,0,0,0,0,0,0,2]]
-findCell(s2,0,0)
-for row in s2:
-    for i in row:
-        print(i," ", end="")
+
+s=s2
+orig=copy.deepcopy(s)
+findCell(s,0,0)
+for i in range(9):
+    for j in range(9):
+        if orig[i][j]==0:
+            prefix='\033[0;37m'
+        else:
+            prefix='\033[0;34m'
+        print(prefix,s[i][j]," ", end="")
+
     print()
