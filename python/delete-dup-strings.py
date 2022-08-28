@@ -1,4 +1,4 @@
-# Delete duplicate strings in a list
+# Delete duplicate strings in a list.
 
 def removeDupStrings(s):
     words=[]
